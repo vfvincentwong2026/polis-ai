@@ -16,6 +16,9 @@
 
 This project is developed in collaboration with **Yonsei University** for the **Institute for Historical Political Intelligence (IHPI)** curriculum.
 
+**Maintainer**: Vincent Wong ([vfvincentwong@gmail.com](mailto:vfvincentwong@gmail.com))  
+**Course Instructor**: Prof. Jenny Zhan ([jennyzhan20@naver.com](mailto:jennyzhan20@naver.com)), Yonsei University
+
 ### 🔑 Key Features
 
 | Feature | Description |
@@ -46,7 +49,7 @@ Visit the official AI Town demo: [https://www.convex.dev/ai-town](https://www.co
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/your-org/polis-ai.git
+git clone https://github.com/vfvincentwong2026/polis-ai.git
 cd polis-ai
 
 # 2. Install dependencies
@@ -55,13 +58,14 @@ npm install
 # 3. Start the backend
 npx convex dev
 
+# 4. Start the frontend (in a new terminal)
+npm run dev
 Open http://localhost:5173 in your browser.
 
 📖 Full installation guide: docs/INSTALL.md
 
-
 📁 Project Structure
-
+text
 polis-ai/
 ├── README.md                 # This file
 ├── agents/                   # 👈 Student's main workspace
@@ -82,10 +86,9 @@ polis-ai/
 │   ├── setup.sh              # One-click setup
 │   └── run.sh                # One-click run
 └── LICENSE                   # MIT License
-
 🎯 How to Customize an Agent
-
 1️⃣ Edit Persona (config.json)
+json
 {
   "name": "Winston Churchill",
   "era": "20th Century",
@@ -103,12 +106,10 @@ polis-ai/
   ],
   "speech_style": "Rhetorically rich, heavy with historical allusion"
 }
-
-
 2️⃣ Edit Knowledge Base (Markdown)
-
 Create or modify agents/your_agent/knowledge/*.md:
 
+markdown
 ---
 id: kc_001
 source: "Churchill's Iron Curtain Speech, March 5, 1946"
@@ -129,23 +130,19 @@ Marked the beginning of the Cold War and defined Churchill's anti-communist stan
 - East-West relations
 - Military alliance policy
 - Ideological confrontation
-
 📖 Full customization guide: docs/CUSTOMIZE.md
-📝 Student Deliverables
 
+📝 Student Deliverables
 Deliverable	Format	Description
 Agent Config	config.json	Modified persona
 Knowledge Cards	*.md	New or updated knowledge entries
 Observation Report	Markdown/PDF	Agent behavior analysis
 Debate Record	Screenshots/Logs	Complete debate transcripts
-
 📚 Documentation
-
 Document	Description
 INSTALL.md	Step-by-step installation (with disk space solutions)
 CUSTOMIZE.md	How to edit persona and knowledge
 OBSERVATION.md	Observation guide with templates
-
 🤝 Contributing
 We welcome Issues and Pull Requests!
 
@@ -201,14 +198,8 @@ PolisAI 是延世大学历史政治智能研究院（IHPI）合作开发的教�
 📖 详细内容请参阅中文指南
 
 📧 Contact
-Project Maintainer: [Your Name / Email]
+Project Maintainer: Vincent Wong (vfvincentwong@gmail.com)
 
-Course Instructor: [Instructor Name / Email]
+Course Instructor: Prof. Jenny Zhan (jennyzhan20@naver.com), Yonsei University
 
-Yonsei IHPI: [Institute Contact]
-
-
-
-
-# 4. Start the frontend (in a new terminal)
-npm run dev
+Yonsei IHPI: Institute for Historical Political Intelligence
