@@ -9,7 +9,7 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
 <div align="center">
-  <img src="https://www.yonsei.ac.kr/common/images/main/logo.png" alt="Yonsei University Logo" width="180" style="margin-right: 40px;"/>
+  <img src="assets/yonsei_logo.png" alt="Yonsei University Logo" width="180" style="margin-right: 40px;"/>
   <span style="font-size: 24px; font-weight: bold; color: #0046AB;">+</span>
   <span style="font-size: 28px; font-weight: bold; color: #CC0000;">PolisAI</span>
 </div>
