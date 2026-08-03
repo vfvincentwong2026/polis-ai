@@ -1,17 +1,32 @@
 # 🏛️ PolisAI
 
-**历史政治智能体实验室 · AI Political Agent Lab**
+**AI Political Agent Lab — A Sandbox for Historical Political Intelligence**
 
-> ⚠️ **重要提示**：本仓库代码在 `master` 分支，[点击这里查看完整代码](https://github.com/vfvincentwong2026/polis-ai/tree/master)
+> ⚠️ **重要提示**：本仓库代码在 `master` 分支 → [点击查看完整代码](https://github.com/vfvincentwong2026/polis-ai/tree/master)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Version](https://img.shields.io/badge/version-v0.1.0-blue.svg)](CHANGELOG.md)
 [![Status](https://img.shields.io/badge/status-Founding%20Beta-green.svg)](CHANGELOG.md)
+[![Node.js 18+](https://img.shields.io/badge/node.js-18+-green.svg)](https://nodejs.org/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+
+<div align="center">
+  <img src="assets/YonseiLogo.png" alt="Yonsei University Logo" width="180" style="margin-right: 40px;"/>
+  <span style="font-size: 24px; font-weight: bold; color: #0046AB;">+</span>
+  <span style="font-size: 28px; font-weight: bold; color: #CC0000;">PolisAI</span>
+</div>
+
+<p align="center">
+  <strong>
+    <span style="color: #0046AB;">Yonsei University</span> · 
+    <span style="color: #CC0000;">IHPI</span> · 
+    <span style="color: #333;">Founding Beta v0.1.0</span>
+  </strong>
+</p>
 
 ---
 
-## 🎮 30秒在线体验
+## 🎮 在线演示（30秒体验）
 
 👉 **[点击这里体验 PolisAI 在线演示](https://sturdy-fishstick-jr5vjqrp54j9h5rx-5173.app.github.dev/ai-town)**
 
@@ -19,127 +34,224 @@
 
 ---
 
-## 👨‍🏫 教师入口
+## 📖 Overview
 
-| 任务 | 操作 |
-|------|------|
-| **演示给学生看** | 点击上面的在线演示链接 |
-| **本地运行** | 参考下方 [快速开始](#快速开始) |
-| **查看学生修改位置** | 打开 `agents/` 文件夹 |
-| **了解更多** | 查看 [完整文档](docs/) |
+**PolisAI** is an educational AI simulation platform built on [AI Town](https://github.com/a16z-infra/ai-town) by a16z. It allows students to **build, customize, and observe** AI agents representing historical political figures in a virtual parliamentary setting.
+
+> **Core Mission**: Not to make AI *imitate* historical figures, but to make AI *reason* like them — with evidence, logical consistency, and historical integrity.
+
+This project is developed in collaboration with **Yonsei University** for the **Institute for Historical Political Intelligence (IHPI)** curriculum.
+
+**Maintainer**: Vincent Wong ([vfvincentwong@gmail.com](mailto:vfvincentwong@gmail.com))  
+**Course Instructor**: Prof. Jenny Zhan ([jennyzhan20@naver.com](mailto:jennyzhan20@naver.com)), Yonsei University
 
 ---
 
-## 👨‍🎓 学生入口
+## 👨‍🏫 For Teachers
 
-### 📁 你要改什么？
+| Task | Action |
+|------|--------|
+| **Demo in class** | Click the online demo link above |
+| **Run locally** | See [Quick Start](#quick-start) below |
+| **See what students modify** | Open the `agents/` folder |
+| **Learn more** | Read the [docs](docs/) |
+
+---
+
+## 👨‍🎓 For Students
+
+### What You Modify
 agents/
-└── 你的名字/ ← 创建以你名字命名的文件夹
-├── config.json ← 修改人设（意识形态、人格、决策规则）
-└── knowledge/ ← 添加知识卡片（Markdown 文件）
+└── your_name/ ← Create a folder with your name
+├── config.json ← Edit persona (ideology, personality, decision rules)
+└── knowledge/ ← Add knowledge cards (Markdown files)
 └── kc_001.md
 
 text
 
-### 📝 修改示例
+### How to Submit Your Work
 
-**修改人设 (`config.json`)**：
+→ Full guide: [Student Submission Guide](docs/SUBMISSION.md)
 
-```json
+---
+
+## 🚀 Quick Start
+
+### Prerequisites
+
+| Software | Version |
+|----------|---------|
+| Node.js | 18.x or higher |
+| Git | Latest |
+
+### Installation
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/vfvincentwong2026/polis-ai.git
+cd polis-ai
+
+# 2. Install dependencies
+npm install
+
+# 3. Start the backend
+npx convex dev
+
+# 4. Start the frontend (in a new terminal)
+npm run dev
+Open http://localhost:5173/ai-town in your browser.
+
+📖 Full installation guide: docs/INSTALL.md
+
+🔑 Key Features
+Feature	Description
+🖥️ Run Locally	No registration required
+📝 Editable Knowledge	Update knowledge via Markdown files
+🎭 Customizable Persona	Adjust ideology, personality, decision rules via JSON
+🗳️ Parliamentary Debate	Trigger multi-agent debates and observe shifts
+👁️ Visual Observation	2D map with real-time agent movement and dialogue
+🔌 Free to Use	Supports local Ollama models — completely free
+🎯 Course Applications
+History & Political Intelligence
+
+AI & Social Sciences
+
+Digital Humanities
+
+Political Simulation & Forecasting
+
+📁 Project Structure (Students: Focus on agents/)
+text
+polis-ai/
+├── README.md                 # This file
+├── agents/                   # 👈 STUDENT'S MAIN WORKSPACE
+│   ├── churchill/            # Sample Agent: Churchill
+│   │   ├── config.json       # Persona configuration
+│   │   └── knowledge/        # Knowledge base
+│   │       ├── kc_001.md
+│   │       └── kc_002.md
+│   └── mandela/              # Sample Agent: Mandela
+│       ├── config.json
+│       └── knowledge/
+├── docs/
+│   ├── INSTALL.md            # Installation guide
+│   ├── CUSTOMIZE.md          # Customization guide
+│   ├── OBSERVATION.md        # Observation guide
+│   └── SUBMISSION.md         # Student submission guide
+├── convex/                   # Backend logic (generally don't modify)
+├── src/                      # Frontend code (generally don't modify)
+├── public/                   # Static assets (generally don't modify)
+└── LICENSE                   # MIT License
+🎯 How to Customize an Agent
+1️⃣ Edit Persona (config.json)
+json
 {
-  "name": "你的政治人物名字",
-  "era": "20世纪",
-  "country": "国家",
-  "ideology": "意识形态",
-  "core_principles": ["原则1", "原则2", "原则3"],
-  "personality_traits": ["特质1", "特质2", "特质3"],
-  "decision_rules": ["决策规则1", "决策规则2"],
-  "speech_style": "演讲风格描述"
+  "name": "Winston Churchill",
+  "era": "20th Century",
+  "country": "United Kingdom",
+  "ideology": "Conservatism",
+  "core_principles": [
+    "Resolute opposition to Nazism",
+    "Preservation of the British Empire",
+    "Priority of democratic institutions"
+  ],
+  "personality_traits": ["Decisive", "Eloquent", "Stubborn"],
+  "decision_rules": [
+    "Prefer defensive strategies in military decisions",
+    "Favor market-oriented economic policies"
+  ],
+  "speech_style": "Rhetorically rich, heavy with historical allusion"
 }
-添加知识卡片 (knowledge/kc_001.md)：
+2️⃣ Edit Knowledge Base (Markdown)
+Create or modify agents/your_agent/knowledge/*.md:
 
 markdown
 ---
 id: kc_001
-source: "来源名称，如《铁幕演说》"
+source: "Churchill's Iron Curtain Speech, March 5, 1946"
 date: "1946-03-05"
-type: "历史证据"
+type: "Historical Evidence"
 ---
 
-## 核心观点
+## Core Argument
 
-[摘录原文或核心论述]
+From Stettin in the Baltic to Trieste in the Adriatic, an iron curtain has descended.
 
-## 政治含义
+## Political Significance
 
-[该观点对人物政治立场的影响]
-📤 如何提交你的作业？
-→ 完整步骤请查看 学生提交指引
+Marked the beginning of the Cold War and defined Churchill's anti-communist stance.
 
-🚀 快速开始
-前置要求
-软件	版本
-Node.js	18.x 或更高
-Git	最新版
-安装步骤
-bash
-# 1. 克隆仓库
-git clone https://github.com/vfvincentwong2026/polis-ai.git
-cd polis-ai
+## Related Issues
 
-# 2. 安装依赖
-npm install
+- East-West relations
+- Military alliance policy
+- Ideological confrontation
+📖 Full customization guide: docs/CUSTOMIZE.md
 
-# 3. 启动后端
-npx convex dev
+📝 Student Deliverables
+Deliverable	Format	Description
+Agent Config	config.json	Modified persona
+Knowledge Cards	*.md	New or updated knowledge entries
+Observation Report	Markdown/PDF	Agent behavior analysis
+Debate Record	Screenshots/Logs	Complete debate transcripts
+📚 Documentation
+Document	Description
+INSTALL.md	Step-by-step installation (with disk space solutions)
+CUSTOMIZE.md	How to edit persona and knowledge
+OBSERVATION.md	Observation guide with templates
+SUBMISSION.md	Student submission guide
+🤝 Contributing
+We welcome Issues and Pull Requests!
 
-# 4. 启动前端（新开终端）
-npm run dev
-浏览器打开 http://localhost:5173/ai-town
+How to submit your Agent:
 
-📖 详细安装指南：docs/INSTALL.md
+Fork this repository
 
-📁 项目结构（学生必看）
-text
-polis-ai/
-├── agents/              ← 👈 学生修改这个文件夹
-│   ├── churchill/       ← 示例：丘吉尔
-│   │   ├── config.json
-│   │   └── knowledge/
-│   └── mandela/         ← 示例：曼德拉
-├── convex/              ← 后端逻辑（一般不改）
-├── src/                 ← 前端界面（一般不改）
-├── public/              ← 静态资源（一般不改）
-├── docs/                ← 文档
-│   ├── INSTALL.md
-│   ├── CUSTOMIZE.md
-│   ├── OBSERVATION.md
-│   └── SUBMISSION.md
-└── README.md
-📚 完整文档
-文档	说明
-INSTALL.md	详细安装步骤
-CUSTOMIZE.md	如何修改人设和知识库
-OBSERVATION.md	观察与记录指南
-SUBMISSION.md	学生作业提交指引
-🤝 合作高校
-延世大学 — Institute for Historical Political Intelligence (IHPI)
+Create your agent folder under agents/
 
-📄 许可证
-MIT License · 免费用于教育和研究
+Submit config.json and knowledge/*.md
 
-🏛️ 在数字城邦中，见证历史的回响。
+Open a Pull Request
 
-🌏 한국어 / 中文 简要说明
-한국어
-PolisAI는 연세대학교 IHPI와 협력하여 개발된 AI 정치인물 시뮬레이션 교육 플랫폼입니다.
-학생들은 AI 에이전트의 성격과 지식을 직접 수정하며 가상 의회에서의 토론을 관찰할 수 있습니다.
+📄 License
+MIT License. Free to use, modify, and distribute for educational purposes.
 
-中文
-PolisAI 是延世大学 IHPI 合作开发的 AI 政治人物模拟教育平台。
-学生可以修改 AI 智能体的人设和知识库，观察其在虚拟议会中的辩论行为。
+Built on a16z-infra/ai-town — also MIT licensed.
 
-📧 联系方式
-项目维护者：Vincent Wong (vfvincentwong@gmail.com)
+🙏 Acknowledgments
+Stanford University Generative Agents research team
 
-课程教授：Prof. Jenny Zhan (jennyzhan20@naver.com)
+a16z-infra AI Town project
+
+Yonsei University IHPI (Institute for Historical Political Intelligence) collaboration
+
+🏛️ PolisAI — Where history echoes in the digital polis.
+
+🌏 한국어 / 中文
+한국어 (Korean)
+PolisAI는 연세대학교 역사정치지능연구소(IHPI)와 협력하여 개발된 AI 정치인물 시뮬레이션 교육 플랫폼입니다.
+
+학생들은 이 플랫폼을 통해:
+
+역사적 정치인물의 AI 에이전트를 직접 구축하고
+
+지식베이스와 성격 설정을 수정하며
+
+가상 의회에서의 토론을 관찰할 수 있습니다.
+
+📖 자세한 내용은 한국어 가이드를 참조하세요.
+
+中文 (Chinese)
+PolisAI 是延世大学历史政治智能研究院（IHPI）合作开发的教育用 AI 政治人物模拟平台。
+
+学生可以通过本平台：
+
+自主构建历史政治人物的 AI 智能体
+
+修改知识库和人格设定
+
+观察其在虚拟议会中的辩论行为
+
+📖 详细内容请参阅中文指南
+
+📧 Contact
