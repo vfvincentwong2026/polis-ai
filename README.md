@@ -1,6 +1,6 @@
 # 🏛️ PolisAI
 
-**AI Political Agent Lab — A Sandbox for Historical Political Intelligence**
+**AI Political Agent Lab — 从 AI Town 到 AI 政治学院**
 
 > ⚠️ **重要提示**：本仓库代码在 `master` 分支，[点击这里查看完整代码](https://github.com/vfvincentwong2026/polis-ai/tree/master)
 
@@ -30,20 +30,55 @@
 
 👉 **[点击这里体验 PolisAI 在线演示](https://sturdy-fishstick-jr5vjqrp54j9h5rx-5173.app.github.dev/ai-town)**
 
-> 无需安装，打开即看。AI 角色在虚拟小镇中自由行走、交谈、辩论。
+> 无需安装，打开即看。AI 角色在虚拟议会中辩论、结盟、决策。
 
 ---
 
-## 📖 Overview
+## 📖 从 AI Town 到 PolisAI
 
-**PolisAI** is an educational AI simulation platform built on [AI Town](https://github.com/a16z-infra/ai-town) by a16z. It allows students to **build, customize, and observe** AI agents representing historical political figures in a virtual parliamentary setting.
+### AI Town 是什么？
 
-> **Core Mission**: Not to make AI *imitate* historical figures, but to make AI *reason* like them — with evidence, logical consistency, and historical integrity.
+**AI Town** 是由 a16z 开源的虚拟小镇项目，基于斯坦福大学《生成式智能体》研究论文。在 AI Town 中，AI 角色自由生活、社交、行走——像一个活的数字社区。
 
-This project is developed in collaboration with **Yonsei University** for the **Institute for Historical Political Intelligence (IHPI)** curriculum.
+### 为什么需要 PolisAI？
 
-**Maintainer**: Vincent Wong ([vfvincentwong@gmail.com](mailto:vfvincentwong@gmail.com))  
-**Course Instructor**: Prof. Jenny Zhan ([jennyzhan20@naver.com](mailto:jennyzhan20@naver.com)), Yonsei University
+AI Town 是**通用社交模拟**，但政治学教育和研究需要的是：
+- 🏛️ **议会辩论** vs 日常闲聊
+- 🧠 **意识形态一致性** vs 随意社交
+- 📜 **史料证据约束** vs 自由发挥
+- 🎯 **政治决策模拟** vs 日常行为模拟
+
+### 我们做了什么转化？
+
+| AI Town（通用社交小镇） | PolisAI（政治学院） |
+|------------------------|-------------------|
+| AI 角色是“虚拟居民” | AI 角色是“政治人物”（丘吉尔、曼德拉等） |
+| 日常闲聊 | 议会辩论 + 政策提案 + 投票 |
+| 随机社交 | 基于意识形态和史料的有序互动 |
+| 无历史约束 | 受历史人格和知识卡片约束 |
+| 娱乐/技术探索 | 教学 + 学术研究 |
+
+> **核心理念**：不是让 AI 模仿历史人物，而是让 AI **以历史人物的思维方式**理解世界——基于证据、逻辑一致、符合历史人格。
+
+---
+
+## 🔑 Key Features
+
+| Feature | Description |
+|---------|-------------|
+| 🏛️ **议会辩论** | 一键触发多 AI 人物议会辩论，观察立场变化 |
+| 📝 **可编辑知识库** | 通过 Markdown 文件为 AI 人物补充史料和观点 |
+| 🎭 **可修改人设** | 通过 JSON 调整意识形态、人格特质、决策规则 |
+| 🖥️ **本地运行** | 学生下载即用，无需注册 |
+| 👁️ **可视化观察** | 2D 场景地图，实时查看 AI 人物移动和对话 |
+| 🔌 **完全免费** | 支持本地 Ollama 开源模型，零成本运行 |
+
+### 🎯 适用课程
+
+- 历史政治智能
+- 人工智能与社会科学
+- 数字人文
+- 政治模拟与预测
 
 ---
 
@@ -51,212 +86,170 @@ This project is developed in collaboration with **Yonsei University** for the **
 
 | Task | Action |
 |------|--------|
-| **Demo in class** | Click the online demo link above |
-| **Run locally** | See [Quick Start](#quick-start) below |
-| **See what students modify** | Open the `agents/` folder |
-| **Learn more** | Read the [docs](docs/) |
+| **课堂演示** | 点击上方在线演示链接 |
+| **本地运行** | 参考下方 [快速开始](#快速开始) |
+| **查看学生修改位置** | 打开 `agents/` 文件夹 |
+| **了解更多** | 阅读 [完整文档](docs/) |
 
 ---
 
 ## 👨‍🎓 For Students
 
-### What You Modify
+### 你的任务
+
+在 `agents/` 文件夹中，以你的名字创建文件夹，构建一个 AI 政治人物：
 agents/
-└── your_name/ ← Create a folder with your name
-├── config.json ← Edit persona (ideology, personality, decision rules)
-└── knowledge/ ← Add knowledge cards (Markdown files)
+└── your_name/ ← 创建以你名字命名的文件夹
+├── config.json ← 人设（意识形态、人格、决策规则）
+└── knowledge/ ← 知识库（史料、观点、证据）
 └── kc_001.md
 
 text
 
-### How to Submit Your Work
-
-→ Full guide: [Student Submission Guide](docs/SUBMISSION.md)
+**提交方式**：查看 [学生提交指引](docs/SUBMISSION.md)
 
 ---
 
-## 🚀 Quick Start
+## 🚀 快速开始
 
-### Prerequisites
+### 前置要求
 
-| Software | Version |
-|----------|---------|
-| Node.js | 18.x or higher |
-| Git | Latest |
+| 软件 | 版本 |
+|------|------|
+| Node.js | 18.x 或更高 |
+| Git | 最新版 |
 
-### Installation
+### 安装步骤
 
 ```bash
-# 1. Clone the repository
+# 1. 克隆仓库
 git clone https://github.com/vfvincentwong2026/polis-ai.git
 cd polis-ai
 
-# 2. Install dependencies
+# 2. 安装依赖
 npm install
 
-# 3. Start the backend
+# 3. 启动后端
 npx convex dev
 
-# 4. Start the frontend (in a new terminal)
+# 4. 启动前端（新开终端）
 npm run dev
-Open http://localhost:5173/ai-town in your browser.
+浏览器打开 http://localhost:5173/ai-town
 
-📖 Full installation guide: docs/INSTALL.md
+📖 详细安装指南：docs/INSTALL.md
 
-🔑 Key Features
-Feature	Description
-🖥️ Run Locally	No registration required
-📝 Editable Knowledge	Update knowledge via Markdown files
-🎭 Customizable Persona	Adjust ideology, personality, decision rules via JSON
-🗳️ Parliamentary Debate	Trigger multi-agent debates and observe shifts
-👁️ Visual Observation	2D map with real-time agent movement and dialogue
-🔌 Free to Use	Supports local Ollama models — completely free
-🎯 Course Applications
-History & Political Intelligence
-
-AI & Social Sciences
-
-Digital Humanities
-
-Political Simulation & Forecasting
-
-📁 Project Structure (Students: Focus on agents/)
+📁 项目结构（学生必看）
 text
 polis-ai/
-├── README.md                 # This file
-├── agents/                   # 👈 STUDENT'S MAIN WORKSPACE
-│   ├── churchill/            # Sample Agent: Churchill
-│   │   ├── config.json       # Persona configuration
-│   │   └── knowledge/        # Knowledge base
-│   │       ├── kc_001.md
-│   │       └── kc_002.md
-│   └── mandela/              # Sample Agent: Mandela
+├── README.md                 # 本文件
+├── agents/                   # 👈 学生修改这个文件夹
+│   ├── churchill/            # 示例：丘吉尔
+│   │   ├── config.json       # 人设配置
+│   │   └── knowledge/        # 知识库
+│   │       ├── kc_001.md    # 铁幕演说
+│   │       └── kc_002.md    # 最辉煌的时刻
+│   └── mandela/              # 示例：曼德拉
 │       ├── config.json
 │       └── knowledge/
 ├── docs/
-│   ├── INSTALL.md            # Installation guide
-│   ├── CUSTOMIZE.md          # Customization guide
-│   ├── OBSERVATION.md        # Observation guide
-│   └── SUBMISSION.md         # Student submission guide
-├── convex/                   # Backend logic (generally don't modify)
-├── src/                      # Frontend code (generally don't modify)
-├── public/                   # Static assets (generally don't modify)
+│   ├── INSTALL.md            # 安装指南
+│   ├── CUSTOMIZE.md          # 自定义指南
+│   ├── OBSERVATION.md        # 观察指南
+│   └── SUBMISSION.md         # 学生提交指引
+├── convex/                   # 后端逻辑（一般不改）
+├── src/                      # 前端界面（一般不改）
 └── LICENSE                   # MIT License
-🎯 How to Customize an Agent
-1️⃣ Edit Persona (config.json)
+🎯 如何修改 Agent
+1️⃣ 编辑人设（config.json）
 json
 {
-  "name": "Winston Churchill",
-  "era": "20th Century",
-  "country": "United Kingdom",
-  "ideology": "Conservatism",
-  "core_principles": [
-    "Resolute opposition to Nazism",
-    "Preservation of the British Empire",
-    "Priority of democratic institutions"
-  ],
-  "personality_traits": ["Decisive", "Eloquent", "Stubborn"],
-  "decision_rules": [
-    "Prefer defensive strategies in military decisions",
-    "Favor market-oriented economic policies"
-  ],
-  "speech_style": "Rhetorically rich, heavy with historical allusion"
+  "name": "你的政治人物名字",
+  "era": "所属时代",
+  "country": "国家",
+  "ideology": "意识形态标签",
+  "core_principles": ["原则1", "原则2", "原则3"],
+  "personality_traits": ["特质1", "特质2", "特质3"],
+  "decision_rules": ["决策规则1", "决策规则2"],
+  "speech_style": "演讲风格描述"
 }
-2️⃣ Edit Knowledge Base (Markdown)
-Create or modify agents/your_agent/knowledge/*.md:
+2️⃣ 编辑知识库（Markdown）
+创建 agents/your_agent/knowledge/*.md：
 
 markdown
 ---
 id: kc_001
-source: "Churchill's Iron Curtain Speech, March 5, 1946"
+source: "来源名称，如《铁幕演说》"
 date: "1946-03-05"
-type: "Historical Evidence"
+type: "历史证据"
 ---
 
-## Core Argument
+## 核心观点
 
-From Stettin in the Baltic to Trieste in the Adriatic, an iron curtain has descended.
+[摘录原文或核心论述]
 
-## Political Significance
+## 政治含义
 
-Marked the beginning of the Cold War and defined Churchill's anti-communist stance.
+[该观点对人物政治立场的影响]
 
-## Related Issues
+## 关联议题
 
-- East-West relations
-- Military alliance policy
-- Ideological confrontation
-📖 Full customization guide: docs/CUSTOMIZE.md
+- 东西方关系
+- 军事同盟政策
+📖 完整自定义指南：docs/CUSTOMIZE.md
 
-📝 Student Deliverables
-Deliverable	Format	Description
-Agent Config	config.json	Modified persona
-Knowledge Cards	*.md	New or updated knowledge entries
-Observation Report	Markdown/PDF	Agent behavior analysis
-Debate Record	Screenshots/Logs	Complete debate transcripts
-📚 Documentation
-Document	Description
-INSTALL.md	Step-by-step installation (with disk space solutions)
-CUSTOMIZE.md	How to edit persona and knowledge
-OBSERVATION.md	Observation guide with templates
-SUBMISSION.md	Student submission guide
-🤝 Contributing
-We welcome Issues and Pull Requests!
+📝 学生提交物
+提交物	格式	说明
+Agent 配置	config.json	修改后的人设
+知识卡片	*.md	新增或修改的知识条目
+观察报告	Markdown/PDF	Agent 行为分析
+辩论记录	截图/日志	议会辩论完整记录
+📚 完整文档
+文档	说明
+INSTALL.md	详细安装步骤
+CUSTOMIZE.md	如何修改人设和知识库
+OBSERVATION.md	观察与记录指南
+SUBMISSION.md	学生提交指引
+🤝 贡献
+欢迎提交 Issue 和 Pull Request！
 
-How to submit your Agent:
+如何提交你的 Agent：
 
-Fork this repository
+Fork 本仓库
 
-Create your agent folder under agents/
+在 agents/ 下创建你的 Agent 文件夹
 
-Submit config.json and knowledge/*.md
+提交 config.json 和 knowledge/*.md
 
-Open a Pull Request
+提交 Pull Request
 
-📄 License
-MIT License. Free to use, modify, and distribute for educational purposes.
+📄 许可证
+MIT License · 免费用于教育和研究
 
-Built on a16z-infra/ai-town — also MIT licensed.
+底层框架基于 a16z-infra/ai-town，同样遵循 MIT 许可证。
 
-🙏 Acknowledgments
-Stanford University Generative Agents research team
+🙏 致谢
+斯坦福大学 Generative Agents 研究团队
 
-a16z-infra AI Town project
+a16z-infra AI Town 项目
 
-Yonsei University IHPI (Institute for Historical Political Intelligence) collaboration
+延世大学 IHPI（历史政治智能研究院）合作
 
-🏛️ PolisAI — Where history echoes in the digital polis.
+🏛️ PolisAI — 在数字城邦中，见证历史的回响。
 
 🌏 한국어 / 中文
 한국어 (Korean)
 PolisAI는 연세대학교 역사정치지능연구소(IHPI)와 협력하여 개발된 AI 정치인물 시뮬레이션 교육 플랫폼입니다.
 
-학생들은 이 플랫폼을 통해:
-
-역사적 정치인물의 AI 에이전트를 직접 구축하고
-
-지식베이스와 성격 설정을 수정하며
-
-가상 의회에서의 토론을 관찰할 수 있습니다.
-
-📖 자세한 내용은 한국어 가이드를 참조하세요.
+AI Town을 기반으로, 일반적인 AI 캐릭터를 역사적 정치인물로 대체하고, 일상적인 대화를 의회 토론으로 전환하였습니다.
 
 中文 (Chinese)
 PolisAI 是延世大学历史政治智能研究院（IHPI）合作开发的教育用 AI 政治人物模拟平台。
 
-学生可以通过本平台：
+基于 AI Town，将通用 AI 角色替换为历史政治人物，将日常对话转化为 议会辩论。
 
-自主构建历史政治人物的 AI 智能体
+📧 联系方式
+项目维护者：Vincent Wong (vfvincentwong@gmail.com)
 
-修改知识库和人格设定
+课程教授：Prof. Jenny Zhan (jennyzhan20@naver.com), 延世大学
 
-观察其在虚拟议会中的辩论行为
-
-📖 详细内容请参阅中文指南
-
-📧 Contact
-Project Maintainer: Vincent Wong (vfvincentwong@gmail.com)
-
-Course Instructor: Prof. Jenny Zhan (jennyzhan20@naver.com), Yonsei University
-
-Yonsei IHPI: Institute for Historical Political Intelligence
+延世大学 IHPI：历史政治智能研究院
