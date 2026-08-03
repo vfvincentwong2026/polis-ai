@@ -3,10 +3,37 @@
 **AI Political Agent Lab — A Sandbox for Historical Political Intelligence**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Version](https://img.shields.io/badge/version-v0.1.0-blue.svg)](CHANGELOG.md)
+[![Status](https://img.shields.io/badge/status-Founding%20Beta-green.svg)](CHANGELOG.md)
 [![Node.js 18+](https://img.shields.io/badge/node.js-18+-green.svg)](https://nodejs.org/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
+<div align="center">
+  <img src="https://www.yonsei.ac.kr/common/images/main/logo.png" alt="Yonsei University Logo" width="180" style="margin-right: 40px;"/>
+  <span style="font-size: 24px; font-weight: bold; color: #0046AB;">+</span>
+  <span style="font-size: 28px; font-weight: bold; color: #CC0000;">PolisAI</span>
+</div>
+
+<p align="center">
+  <strong>
+    <span style="color: #0046AB;">Yonsei University</span> · 
+    <span style="color: #CC0000;">IHPI</span> · 
+    <span style="color: #333;">Founding Beta v0.1.0</span>
+  </strong>
+</p>
+
 ---
+
+## 📖 Overview
+
+**PolisAI** is an educational AI simulation platform built on [AI Town](https://github.com/a16z-infra/ai-town) by a16z. It allows students to **build, customize, and observe** AI agents representing historical political figures in a virtual parliamentary setting.
+
+> **Core Mission**: Not to make AI *imitate* historical figures, but to make AI *reason* like them — with evidence, logical consistency, and historical integrity.
+
+This project is developed in collaboration with **Yonsei University** for the **Institute for Historical Political Intelligence (IHPI)** curriculum.
+
+**Maintainer**: Vincent Wong ([vfvincentwong@gmail.com](mailto:vfvincentwong@gmail.com))  
+**Course Instructor**: Prof. Jenny Zhan ([jennyzhan20@naver.com](mailto:jennyzhan20@naver.com)), Yonsei University
 
 ## 📖 Overview
 
