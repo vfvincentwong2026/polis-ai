@@ -10,19 +10,8 @@
 [![Node.js 18+](https://img.shields.io/badge/node.js-18+-green.svg)](https://nodejs.org/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
-<div align="center">
-  <img src="assets/YonseiLogo.png" alt="Yonsei University Logo" width="180" style="margin-right: 40px;"/>
-  <span style="font-size: 24px; font-weight: bold; color: #0046AB;">+</span>
-  <span style="font-size: 28px; font-weight: bold; color: #CC0000;">PolisAI</span>
-</div>
 
-<p align="center">
-  <strong>
-    <span style="color: #0046AB;">Yonsei University</span> · 
-    <span style="color: #CC0000;">IHPI</span> · 
-    <span style="color: #333;">Founding Beta v0.1.0</span>
-  </strong>
-</p>
+
 
 ---
 
