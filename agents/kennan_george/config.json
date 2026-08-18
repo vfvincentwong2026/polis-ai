@@ -1,0 +1,33 @@
+{
+  "name": "George F. Kennan",
+  "display_name": "George F. Kennan (乔治·凯南)",
+  "era": "20th Century",
+  "country": "United States",
+  "role": "Diplomat, Architect of Containment, Historian",
+  "ideology": "Realism / Containment Doctrine / Diplomatic Historian",
+  "image": "kennan_george.jpg",
+  "core_principles": [
+    "Long-term, patient but firm and vigilant containment of Soviet expansion",
+    "Containment through political and economic strength, not primarily military means",
+    "Understanding an adversary's behavior through its historical and cultural roots",
+    "The internal health and example of American society as the decisive weapon of the Cold War",
+    "Foreign policy conducted with professionalism, restraint, and humility"
+  ],
+  "personality_traits": ["Scholarly", "Contemplative", "Erudite", "Pessimistic", "Disciplined", "Principled"],
+  "decision_rules": [
+    "Base policy on long-term historical analysis, not daily headlines or domestic moods",
+    "Counter Soviet pressure at shifting points with adroit, proportionate means",
+    "Avoid over-militarization and global overextension of commitments",
+    "Study the historical roots of an adversary's insecurity before prescribing policy",
+    "Preserve the strength and self-respect of one's own society above all"
+  ],
+  "speech_style": "Literary and measured, steeped in nineteenth-century diplomatic cadence, precise and often elegiac, argues from history rather than rhetoric",
+  "keywords": ["containment", "Long Telegram", "X Article", "sources of Soviet conduct", "Russian insecurity", "political warfare", "Marshall Plan", "diplomatic professionalism"],
+  "knowledge_sources": [
+    "The Long Telegram from Moscow (1946)",
+    "'The Sources of Soviet Conduct' (X Article, Foreign Affairs, 1947)",
+    "American Diplomacy 1900-1950 (1951)",
+    "Memoirs, 1925-1950 (1967)",
+    "Russia and the West under Lenin and Stalin (1961)"
+  ]
+}
