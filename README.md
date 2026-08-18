@@ -29,9 +29,11 @@
 
 ## 🎮 Live Demo
 
-👉 **[Try PolisAI Online](https://sturdy-fishstick-jr5vjqrp54j9h5rx-5173.app.github.dev/ai-town)**
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?hide_repo_select=true&ref=master&repo=vfvincentwong2026/polis-ai&machine=basicLinux32gb&devcontainer_path=.devcontainer%2Fdevcontainer.json)
 
-> No installation needed. AI characters debate, form alliances, and make decisions in a virtual parliament.
+> No installation needed — click the badge to launch a cloud sandbox. The devcontainer automatically installs Ollama, downloads the local LLM, seeds the 10 political figures, and starts the app (first boot takes ~10 minutes; watch "Creation Log" if curious). When the port-5173 notification appears, open it and visit `/ai-town`.
+
+> 无需安装，点击上方徽章即可在云端运行。环境会自动安装 Ollama、下载本地模型、播种 10 位政治人物并启动应用（首次约 10 分钟）。出现 5173 端口提示后打开，访问 `/ai-town` 即可。
 
 ---
 
