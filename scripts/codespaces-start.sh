@@ -78,10 +78,19 @@ VITE_URL_FILE=/tmp/vite-convex-url.txt
 if ! curl -sf -m 3 -o /dev/null http://127.0.0.1:5173/ai-town \
    || [ "$(cat "$VITE_URL_FILE" 2>/dev/null)" != "$BACKEND_URL" ]; then
   fuser -k 5173/tcp 2>/dev/null || true
-  sleep 2
+  # Wait until the port is really free (fuser kill is async; a half-dead
+  # listener would make vite --strictPort crash with EADDRINUSE).
+  for i in $(seq 1 15); do
+    fuser 5173/tcp >/dev/null 2>&1 || break
+    sleep 1
+  done
   nohup npx vite --host 0.0.0.0 --strictPort > /tmp/vite.log 2>&1 &
   echo "$BACKEND_URL" > "$VITE_URL_FILE"
-  sleep 5
+  # Wait until vite actually serves, so the tunnel never hits a dead origin.
+  for i in $(seq 1 20); do
+    curl -sf -m 3 -o /dev/null http://127.0.0.1:5173/ai-town && break
+    sleep 2
+  done
 fi
 
 echo "==> [7/7] Public frontend tunnel"
