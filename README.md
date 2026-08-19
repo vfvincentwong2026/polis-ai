@@ -41,10 +41,12 @@
 
 **直接打开演示链接（无需注册、无需登录）：**
 
-> 🔗 **https://super-duper-carnival-6v7qw6jpq4vc7r4-5173.app.github.dev/ai-town**
+> 🔗 **https://polis-ai.pages.dev/ai-town** （推荐：Cloudflare Pages 托管，固定域名、秒开、24 小时可访问）
 
-> ✅ 该链接与 codespace 绑定，**重启不变**（比临时隧道稳定得多）。
-> ⚠️ 若打不开：① 先确认演示环境处于唤醒状态（找维护者）；② 你所在的网络需能访问 GitHub。
+> 备用链路：**https://super-duper-carnival-6v7qw6jpq4vc7r4-5173.app.github.dev/ai-town**（GitHub 隧道，与 codespace 绑定、重启不变）
+
+> ℹ️ 前端页面永远在线；**人物活动和对话需要后端引擎处于唤醒状态**（找维护者一键唤醒即可）。
+> ⚠️ 若两个链接都打不开，说明你所在网络访问 Cloudflare/GitHub 受限，请换网络或联系维护者。
 
 ### 你会看到什么
 
@@ -77,6 +79,16 @@ gh codespace ports visibility 5173:public 3210:public -c <codespace-name>
 
 > 说明：`codespaces-start.sh` 同时会重建 Cloudflare 备用隧道（`*.trycloudflare.com`，
 > 链接随机生成、每次不同），适合 GitHub 链路不可达时应急使用，地址见脚本结尾输出。
+
+### 维护者：重新部署 Cloudflare Pages 前端
+
+Pages 前端把后端地址烘焙进了静态包。只有 **codespace 被删除重建（名字变了）** 时才需要重新部署：
+
+```bash
+# 在本机仓库根目录
+VITE_CONVEX_URL=https://<codespace-name>-3210.app.github.dev npx vite build
+wrangler pages deploy dist --project-name=polis-ai --branch=master
+```
 
 ---
 
