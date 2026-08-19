@@ -41,9 +41,10 @@
 
 **直接打开演示链接（无需注册、无需登录）：**
 
-> 🔗 **https://deployment-ins-toolbar-chronicle.trycloudflare.com/ai-town**
+> 🔗 **https://super-duper-carnival-6v7qw6jpq4vc7r4-5173.app.github.dev/ai-town**
 
-> ⚠️ 隧道链接是临时的，如失效请联系维护者重建（见下方"维护者"一节），最新链接也会更新在这里。
+> ✅ 该链接与 codespace 绑定，**重启不变**（比临时隧道稳定得多）。
+> ⚠️ 若打不开：① 先确认演示环境处于唤醒状态（找维护者）；② 你所在的网络需能访问 GitHub。
 
 ### 你会看到什么
 
@@ -64,13 +65,18 @@
 - 给学生布置观察任务：记录两位人物的对话，分析其政策立场是否符合史实
 - 对比实验：观察"现实主义"（基辛格、凯南）与"发展主义"（朴正熙、李光耀）人物的互动差异
 
-### 维护者：链接失效时重建
+### 维护者：服务重启后恢复
 
 ```bash
-# 进入 codespace 终端，一条命令重建全部服务和新链接
+# 1. 唤醒 codespace（GitHub 网页或 gh CLI）
+# 2. 进入 codespace 终端，一条命令重建全部服务
 bash scripts/codespaces-start.sh
-# 结尾会打印新的分享链接，替换上文 🔗 链接即可
+# 3. 重新开放端口可见性（codespace 重启后会重置为 private）
+gh codespace ports visibility 5173:public 3210:public -c <codespace-name>
 ```
+
+> 说明：`codespaces-start.sh` 同时会重建 Cloudflare 备用隧道（`*.trycloudflare.com`，
+> 链接随机生成、每次不同），适合 GitHub 链路不可达时应急使用，地址见脚本结尾输出。
 
 ---
 
