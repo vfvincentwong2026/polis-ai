@@ -37,6 +37,18 @@ EOF
   npx convex env set OLLAMA_EMBEDDING_MODEL "${OLLAMA_EMBEDDING_MODEL:-mxbai-embed-large}"
 fi
 
+echo "==> [3.5/7] Ensure GitHub port forwarding is public (auto-fix flapping visibility)"
+if [ -n "$CODESPACE_NAME" ] && [ -n "$GH_TOKEN" ]; then
+  export GH_TOKEN
+  gh codespace ports visibility 5173:public 3210:public -c "$CODESPACE_NAME" >/dev/null 2>&1 && echo "ports set to public" || echo "ports visibility skipped"
+fi
+
+echo "==> [4/7] Cloudflare tunnels (public URLs, no login required to view)"
+  npx convex env set OLLAMA_HOST http://host.docker.internal:11434
+  npx convex env set OLLAMA_MODEL "${OLLAMA_MODEL:-llama3.2:3b}"
+  npx convex env set OLLAMA_EMBEDDING_MODEL "${OLLAMA_EMBEDDING_MODEL:-mxbai-embed-large}"
+fi
+
 echo "==> [4/7] Cloudflare tunnels (public URLs, no login required to view)"
 ARCH=$(uname -m); case "$ARCH" in aarch64|arm64) ARCH=arm64;; *) ARCH=amd64;; esac
 CF=/tmp/cloudflared

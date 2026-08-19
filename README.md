@@ -72,6 +72,15 @@
 ```bash
 # 1. 唤醒 codespace（GitHub 网页或 gh CLI）
 # 2. 进入 codespace 终端，一条命令重建全部服务
+#    如果设置了 GH_TOKEN，脚本会自动把端口设为公开
+bash scripts/codespaces-start.sh
+# 3. （仅当脚本提示端口未公开时）手动执行：
+gh codespace ports visibility 5173:public 3210:public -c <codespace-name>
+```
+
+```bash
+# 1. 唤醒 codespace（GitHub 网页或 gh CLI）
+# 2. 进入 codespace 终端，一条命令重建全部服务
 bash scripts/codespaces-start.sh
 # 3. 重新开放端口可见性（codespace 重启后会重置为 private）
 gh codespace ports visibility 5173:public 3210:public -c <codespace-name>
