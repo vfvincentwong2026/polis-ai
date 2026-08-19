@@ -41,7 +41,7 @@
 
 **直接打开演示链接（无需注册、无需登录）：**
 
-> 🔗 **https://charitable-roommate-tar-quote.trycloudflare.com/ai-town**
+> 🔗 **https://deployment-ins-toolbar-chronicle.trycloudflare.com/ai-town**
 
 > ⚠️ 隧道链接是临时的，如失效请联系维护者重建（见下方"维护者"一节），最新链接也会更新在这里。
 
