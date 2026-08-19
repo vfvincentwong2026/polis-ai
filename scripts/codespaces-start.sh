@@ -64,6 +64,8 @@ CF_BACKEND_URL=$(tunnel_url /tmp/cf-backend.log) || { echo "!! backend tunnel fa
 # Prefer the STABLE GitHub-forwarded backend URL when running in a Codespace:
 # it is derived from the codespace name (survives restarts), and viewers in
 # some networks cannot reach *.trycloudflare.com. Cloudflare stays as fallback.
+# (CODESPACE_NAME is set in real codespace shells; pass it explicitly when
+# driving this script over `gh codespace ssh`.)
 if [ -n "$CODESPACE_NAME" ]; then
   DOMAIN="${GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN:-app.github.dev}"
   BACKEND_URL="https://${CODESPACE_NAME}-3210.${DOMAIN}"
@@ -71,18 +73,20 @@ else
   BACKEND_URL="$CF_BACKEND_URL"
 fi
 
-# Point the frontend at the (possibly new) public backend URL.
-if grep -q '^VITE_CONVEX_URL=' .env.local 2>/dev/null; then
-  sed -i "s|^VITE_CONVEX_URL=.*|VITE_CONVEX_URL=${BACKEND_URL}|" .env.local
-else
-  echo "VITE_CONVEX_URL=${BACKEND_URL}" >> .env.local
-fi
-
 echo "==> [5/7] Push functions, seed the world, wake the engine (idempotent)"
 node scripts/generate-agents.mjs
 npx convex dev --once
 npx convex run init || true
 npx convex run testing:resume || true
+
+# Point the frontend at the (possibly new) public backend URL.
+# NOTE: must run AFTER `npx convex dev --once`, because the Convex CLI
+# rewrites VITE_CONVEX_URL in .env.local to the local deployment address.
+if grep -q '^VITE_CONVEX_URL=' .env.local 2>/dev/null; then
+  sed -i "s|^VITE_CONVEX_URL=.*|VITE_CONVEX_URL=${BACKEND_URL}|" .env.local
+else
+  echo "VITE_CONVEX_URL=${BACKEND_URL}" >> .env.local
+fi
 
 echo "==> [6/7] Frontend (static build + preview on :5173; rebuilt only if backend URL changed)"
 # Static build loads in seconds over tunnels; dev-server mode compiles on demand
