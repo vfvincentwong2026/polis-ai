@@ -5,11 +5,13 @@
   "portsAttributes": {
     "5173": {
       "label": "PolisAI Frontend",
-      "onAutoForward": "notify"
+      "onAutoForward": "notify",
+      "visibility": "public"
     },
     "3210": {
       "label": "Convex Backend (local)",
-      "onAutoForward": "silent"
+      "onAutoForward": "silent",
+      "visibility": "public"
     }
   },
   "postCreateCommand": "bash scripts/codespaces-setup.sh",
