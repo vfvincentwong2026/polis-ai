@@ -161,7 +161,7 @@ Open an Issue: GitHub Issues
 
 Contact Maintainer: Vincent Wong (vfvincentwong@gmail.com)
 
-Course Instructor: Prof. Jenny Zhan (jennyzhan20@naver.com)
+Course Instructor: Prof. Jenny Zhan (联系方式请通过仓库 Issue)
 
 Recognition
 All contributors will be recognized in our CONTRIBUTORS.md file. Your contributions will also be credited in the project's release notes.
