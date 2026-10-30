@@ -32,7 +32,7 @@
 This project is developed in collaboration with **Yonsei University** for the **Institute for Historical Political Intelligence (IHPI)** curriculum.
 
 **Maintainer**: Vincent Wong ([vfvincentwong@gmail.com](mailto:vfvincentwong@gmail.com))  
-**Course Instructor**: Prof. Jenny Zhan ([jennyzhan20@naver.com](mailto:jennyzhan20@naver.com)), Yonsei University
+**Course Instructor**: Prof. Jenny Zhan (联系方式请通过仓库 Issue), Yonsei University
 
 ---
 
